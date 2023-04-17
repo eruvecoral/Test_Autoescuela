@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rowitem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:padding="15dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imagen"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="65dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="match_parent"
+        android:layout_height="229dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/IsCar_Context_DES"
+        android:src="@drawable/iscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <TextView
+        android:id="@+id/pregunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imagen"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="30dp"
+        android:maxHeight="170dp"
+        android:text="La pregunta va aquí, a continuacion va la pregunta, blablablabla bla bla blabla??"
+        android:autoSizeTextType="uniform"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="258dp"
+        android:layout_below="@+id/pregunta"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="-32dp"
+        android:layout_marginBottom="15dp"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/opcionA"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:text="A. Respuesta a de prueba para ver si se ve bien o qué pasa con las opciones " />
+
+        <RadioButton
+            android:id="@+id/opcionB"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="B. Si se te acerca un coche a toda castaña pero es el coche fantastico dices bueno ok" />
+
+        <RadioButton
+            android:id="@+id/opcionC"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="C. Cuando vas por via interurbana y te cruzas con un urbano tambien eres interurbano" />
+
+    </RadioGroup>
+
+</RelativeLayout>
